@@ -80,6 +80,7 @@ export const pathfinderDataSchema = z.object({
   teveMalaria: z.boolean(),
   teveHepatite: z.boolean(),
   teveDifteria: z.boolean(),
+  ehAutista: z.boolean(),
   ehDeficienteAuditivo: z.boolean(),
   ehDeficienteVisual: z.boolean(),
   ehDeficienteFisico: z.boolean(),

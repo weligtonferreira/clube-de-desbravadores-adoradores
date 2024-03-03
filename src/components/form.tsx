@@ -576,7 +576,7 @@ export function Form() {
         </div>
       </div>
 
-      <div className='w-full flex flex-col lg:flex-row py-1'>
+      <div className='w-full flex flex-col lg:flex-row py-1 pb-4'>
         <div className='lg:w-full flex flex-col mx-3 my-1'>
           <label
             htmlFor='grauParentescoResponsavel'
@@ -622,7 +622,9 @@ export function Form() {
         </div>
       </div>
 
-      <h1 className='mt-2 mb-4 mx-4 text-red-500 text-3xl'>Ficha Médica</h1>
+      <hr className='ml-2' />
+
+      <h1 className='p-4 text-red-500 text-3xl'>Ficha Médica</h1>
 
       <hr className='ml-2' />
 
@@ -1325,6 +1327,18 @@ export function Form() {
         className='lg:w-full flex flex-col px-3 pt-6 pb-4'
       >
         <div className='w-full flex flex-col lg:flex-row gap-0 lg:gap-32 mb-5'>
+          <div className='flex items-center mb-1'>
+            <input
+              type='checkbox'
+              id='ehAutista'
+              {...register('ehAutista')}
+              className='mr-2'
+            />
+            <label htmlFor='ehAutista' className={`${poppings.className} mb-0`}>
+              Autismo
+            </label>
+          </div>
+
           <div className='flex items-center mb-1'>
             <input
               type='checkbox'
