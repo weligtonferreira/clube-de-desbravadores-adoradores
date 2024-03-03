@@ -1322,66 +1322,154 @@ export function Form() {
         Portador de Necessidades Especiais
       </h2>
 
-      <div
-        title='Necessidades Especiais'
-        className='lg:w-full flex flex-col px-3 pt-6 pb-4'
-      >
-        <div className='w-full flex flex-col lg:flex-row gap-0 lg:gap-32 mb-5'>
-          <div className='flex items-center mb-1'>
-            <input
-              type='checkbox'
-              id='ehAutista'
-              {...register('ehAutista')}
-              className='mr-2'
-            />
-            <label htmlFor='ehAutista' className={`${poppings.className} mb-0`}>
-              Autismo
-            </label>
+      <div className='lg:w-full flex flex-col px-3 pt-6 pb-4'>
+        <div className='w-full flex flex-col sm:flex-row mb-5'>
+          <div className='w-full flex flex-col gap-1 mb-1'>
+            <div className='flex items-center mb-1'>
+              <input
+                type='checkbox'
+                id='ehDeficienteAuditivo'
+                {...register('ehDeficienteAuditivo')}
+                className='mr-2'
+              />
+              <label
+                htmlFor='ehDeficienteAuditivo'
+                className={`${poppings.className} mb-0`}
+              >
+                Deficiente Auditivo
+              </label>
+            </div>
+
+            <div className='flex items-center mb-1'>
+              <input
+                type='checkbox'
+                id='ehDeficienteVisual'
+                {...register('ehDeficienteVisual')}
+                className='mr-2'
+              />
+              <label
+                htmlFor='ehDeficienteVisual'
+                className={`${poppings.className} mb-0`}
+              >
+                Deficiente Visual
+              </label>
+            </div>
+
+            <div className='flex items-center mb-1'>
+              <input
+                type='checkbox'
+                id='ehDeficienteFisico'
+                {...register('ehDeficienteFisico')}
+                className='mr-2'
+              />
+              <label
+                htmlFor='ehDeficienteFisico'
+                className={`${poppings.className} mb-0`}
+              >
+                Deficiente Físico (cadeirante)
+              </label>
+            </div>
+
+            <div className='flex items-center mb-1'>
+              <input
+                type='checkbox'
+                id='ehAutista'
+                {...register('ehAutista')}
+                className='mr-2'
+              />
+              <label
+                htmlFor='ehAutista'
+                className={`${poppings.className} mb-0`}
+              >
+                Transtorno do Espectro Autista (TEA)
+              </label>
+            </div>
+
+            <div className='flex items-center mb-1'>
+              <input
+                type='checkbox'
+                id='temTranstornoBipolar'
+                {...register('temTranstornoBipolar')}
+                className='mr-2'
+              />
+              <label
+                htmlFor='temTranstornoBipolar'
+                className={`${poppings.className} mb-0`}
+              >
+                Transtorno Bipolar (TBP)
+              </label>
+            </div>
           </div>
 
-          <div className='flex items-center mb-1'>
-            <input
-              type='checkbox'
-              id='ehDeficienteAuditivo'
-              {...register('ehDeficienteAuditivo')}
-              className='mr-2'
-            />
-            <label
-              htmlFor='ehDeficienteAuditivo'
-              className={`${poppings.className} mb-0`}
-            >
-              Deficiente Auditivo
-            </label>
-          </div>
+          <div className='w-full flex flex-col gap-1 mb-1'>
+            <div className='flex items-center mb-1'>
+              <input
+                type='checkbox'
+                id='temTdah'
+                {...register('temTdah')}
+                className='mr-2'
+              />
+              <label htmlFor='temTdah' className={`${poppings.className} mb-0`}>
+                Transtorno de Déficit de Atenção/Hiperatividade (TDAH)
+              </label>
+            </div>
 
-          <div className='flex items-center mb-1'>
-            <input
-              type='checkbox'
-              id='ehDeficienteVisual'
-              {...register('ehDeficienteVisual')}
-              className='mr-2'
-            />
-            <label
-              htmlFor='ehDeficienteVisual'
-              className={`${poppings.className} mb-0`}
-            >
-              Deficiente Visual
-            </label>
-          </div>
+            <div className='flex items-center mb-1'>
+              <input
+                type='checkbox'
+                id='temToc'
+                {...register('temToc')}
+                className='mr-2'
+              />
+              <label htmlFor='temToc' className={`${poppings.className} mb-0`}>
+                Transtorno Obsessivo Compulsivo (TOC)
+              </label>
+            </div>
 
-          <div className='flex items-center mb-1'>
-            <input
-              type='checkbox'
-              id='ehDeficienteFisico'
-              {...register('ehDeficienteFisico')}
-              className='mr-2'
-            />
-            <label
-              htmlFor='ehDeficienteFisico'
-              className={`${poppings.className} mb-0`}
-            >
-              Deficiente Físico (cadeirante)
-            </label>
+            <div className='flex items-center mb-1'>
+              <input
+                type='checkbox'
+                id='temSindromeDeDown'
+                {...register('temSindromeDeDown')}
+                className='mr-2'
+              />
+              <label
+                htmlFor='temSindromeDeDown'
+                className={`${poppings.className} mb-0`}
+              >
+                Síndrome de Down
+              </label>
+            </div>
+
+            <div className='flex items-center mb-1'>
+              <input
+                type='checkbox'
+                id='temSindromeDeAsperger'
+                {...register('temSindromeDeAsperger')}
+                className='mr-2'
+              />
+              <label
+                htmlFor='temSindromeDeAsperger'
+                className={`${poppings.className} mb-0`}
+              >
+                Síndrome de Asperger
+              </label>
+            </div>
+
+            <div className='flex items-center mb-1'>
+              <input
+                type='checkbox'
+                id='temSindromeDeTourett'
+                {...register('temSindromeDeTourett')}
+                className='mr-2'
+              />
+              <label
+                htmlFor='temSindromeDeTourett'
+                className={`${poppings.className} mb-0`}
+              >
+                Síndrome de Tourett
+              </label>
+            </div>
           </div>
         </div>
 
