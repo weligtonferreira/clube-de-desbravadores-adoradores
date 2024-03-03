@@ -340,17 +340,14 @@ export function Form() {
       <div className='flex flex-col lg:flex-row py-1'>
         <div className='lg:w-96 flex flex-col mx-3 my-1'>
           <label htmlFor='nomeMae' className={`${poppings.className}`}>
-            Mãe<span className='text-red-600 font-normal ml-1'>*</span>
+            Mãe
           </label>
           <input
             type='text'
             id='nomeMae'
-            {...register('nomeMae', { required: 'Campo obrigatório' })}
+            {...register('nomeMae')}
             autoCapitalize='off'
           />
-          {errors.nomeMae?.message && (
-            <p className='error-message'>{errors.nomeMae?.message}</p>
-          )}
         </div>
 
         <div className='lg:w-72 flex flex-col mx-3 my-1'>
@@ -1472,30 +1469,71 @@ export function Form() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className='w-full flex flex-col'>
-          <div className='flex items-center mb-1'>
-            <input
-              type='checkbox'
-              id='termosDeUso'
-              {...register('termosDeUso', {
-                required: 'Aceite os termos de uso',
-              })}
-              className='mr-2'
-            />
-            <label
-              htmlFor='termosDeUso'
-              className={`${poppings.className} mb-0`}
-            >
-              {
-                'Ao clicar em "Enviar" você automaticamente estará aceitando os termos de uso.'
-              }
-            </label>
-          </div>
-          {errors.termosDeUso?.message && (
-            <p className='error-message'>{errors.termosDeUso?.message}</p>
+      <hr className='ml-2' />
+
+      <div className='flex flex-col lg:flex-row pt-4 pb-4 py-1'>
+        <div className='lg:w-full flex flex-col mx-3 py-1'>
+          <label
+            htmlFor='paisOuResonsaveis'
+            className={`${poppings.className}`}
+          >
+            Pais/Responsáveis
+            <span className='text-red-600 font-normal ml-1'>*</span>
+          </label>
+          <input
+            type='text'
+            id='paisOuResonsaveis'
+            {...register('paisOuResonsaveis', {
+              required: 'Campo obrigatório',
+            })}
+            autoComplete='off'
+          />
+          {errors.paisOuResonsaveis?.message && (
+            <p className='error-message'>{errors.paisOuResonsaveis?.message}</p>
           )}
         </div>
+
+        <div className='lg:w-full flex flex-col mx-3 my-1'>
+          <label htmlFor='nomeDiretor' className={`${poppings.className}`}>
+            Diretor(a)
+            <span className='text-red-600 font-normal ml-1'>*</span>
+          </label>
+          <input
+            type='text'
+            id='nomeDiretor'
+            {...register('nomeDiretor', {
+              required: 'Campo obrigatório',
+            })}
+            autoComplete='off'
+          />
+          {errors.nomeDiretor?.message && (
+            <p className='error-message'>{errors.nomeDiretor?.message}</p>
+          )}
+        </div>
+      </div>
+
+      <div className='w-full flex flex-col pl-4'>
+        <div className='flex items-center mb-1'>
+          <input
+            type='checkbox'
+            id='termosDeUso'
+            {...register('termosDeUso', {
+              required: 'Aceite os termos de uso',
+            })}
+            className='mr-2'
+          />
+          <label htmlFor='termosDeUso' className={`${poppings.className} mb-0`}>
+            {
+              'Ao clicar em "Enviar" você automaticamente estará aceitando os termos de uso.'
+            }
+            <span className='text-red-600 font-normal ml-1'>*</span>
+          </label>
+        </div>
+        {errors.termosDeUso?.message && (
+          <p className='error-message'>{errors.termosDeUso?.message}</p>
+        )}
       </div>
 
       <div className='lg:w-full flex gap-5 p-6'>

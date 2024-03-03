@@ -90,5 +90,7 @@ export const pathfinderDataSchema = z.object({
   ehDeficienteAuditivo: z.boolean(),
   ehDeficienteVisual: z.boolean(),
   ehDeficienteFisico: z.boolean(),
+  paisOuResonsaveis: z.string(),
+  nomeDiretor: z.string(),
   termosDeUso: z.boolean(),
 });
